@@ -45,6 +45,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #define RELEASE(a)		if(a) { a->Release(); a = NULL; }
 
+// TODO: Check why this macro in WinUser.h is not seen
+#define GWL_USERDATA        (-21)
 
 inline void Trace(const char *pszFormat, ...)
 {
@@ -162,7 +164,8 @@ public:
 		m_hInstance = hInstance;
 		m_hWndParent = hWndParent;
 	}
-	static BOOL CALLBACK DlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+
+	static INT_PTR CALLBACK DlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		CDialog *pDlg;
 		switch(uMsg)
@@ -425,7 +428,7 @@ public:
 protected:
 
 public:	
-	CWinApp(HINSTANCE hInstance, HINSTANCE hPrevInstance=NULL, char *pszCmdLine="", int nShowCmd=SW_SHOWNORMAL)
+	CWinApp(HINSTANCE hInstance, HINSTANCE hPrevInstance=NULL, const char *pszCmdLine="", int nShowCmd=SW_SHOWNORMAL)
 	{
 		m_pMainApp = this;
 		m_hInstance = hInstance;

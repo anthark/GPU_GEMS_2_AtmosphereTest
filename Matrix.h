@@ -291,7 +291,7 @@ public:
 	CQuaternion Conjugate() const			{ return CQuaternion(-x, -y, -z, w); }
 	CQuaternion Inverse() const				{ return Conjugate() / MagnitudeSquared(); }
 	CQuaternion UnitInverse() const			{ return Conjugate(); }
-	CVector RotateVector(const CVector &v) const	{ return (*this * CQuaternion(v) * UnitInverse()); }
+	CVector RotateVector(const CVector &v) const	{ return CVector(*this * CQuaternion(v) * UnitInverse()); }
 
 	void SetAxisAngle(const CVector &vAxis, const float fAngle)
 	{
@@ -873,7 +873,7 @@ public:
 	{	// Initializes the plane based on three points in the plane
 		Init(NormalVector(p1, p2, p3), p1);
 	}
-	void Init(CVector &vNormal, CVector &p)
+	void Init(const CVector &vNormal, const CVector &p)
 	{	// Initializes the plane based on a normal and a point in the plane
 		m_vNormal = vNormal;
 		D = -(p | m_vNormal);
@@ -1050,9 +1050,9 @@ public:
 	float GetMass()						{ return m_fMass; }
 	void SetBoundingRadius(float f)		{ m_fBoundingRadius = f; }
 	float GetBoundingRadius()			{ return m_fBoundingRadius; }
-	void SetPosition(CDoubleVector &v)	{ m_vPosition = v; }
+	void SetPosition(const CDoubleVector &v)	{ m_vPosition = v; }
 	CDoubleVector GetPosition()			{ return m_vPosition; }
-	void SetVelocity(CVector &v)		{ m_vVelocity = v; }
+	void SetVelocity(const CVector &v)		{ m_vVelocity = v; }
 	CVector GetVelocity()				{ return m_vVelocity; }
 
 	CMatrix GetViewMatrix()

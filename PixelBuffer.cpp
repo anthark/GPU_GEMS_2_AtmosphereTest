@@ -33,7 +33,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 // LibJPEG headers
 extern "C" {
+	#define XMD_H // TODO: Not sure if it correct way to get rid of INT32 redefinition
 	#include "jpeglib.h"
+	#undef XMD_H
 };
 
 

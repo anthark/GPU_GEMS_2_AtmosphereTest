@@ -60,7 +60,7 @@ protected:
 	void OnSize(int nType, int nWidth, int nHeight);
 
 public:
-	CGameApp(HINSTANCE hInstance, HINSTANCE hPrevInstance=NULL, char *pszCmdLine="", int nShowCmd=SW_SHOWNORMAL)
+	CGameApp(HINSTANCE hInstance, HINSTANCE hPrevInstance=NULL, const char *pszCmdLine="", int nShowCmd=SW_SHOWNORMAL)
 		: CWinApp(hInstance, hPrevInstance, pszCmdLine, nShowCmd)
 	{
 		m_hDC = NULL;

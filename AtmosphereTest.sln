@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtmosphereTest", "AtmosphereTest.vcxproj", "{40CD6193-486E-4267-A578-CA6D378C95DA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeglib", "jpeglib-6b\jpeglib.vcxproj", "{E2757156-EE69-4D61-BF6F-8778F0B5A348}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{40CD6193-486E-4267-A578-CA6D378C95DA}.Debug|x64.Build.0 = Debug|x64
 		{40CD6193-486E-4267-A578-CA6D378C95DA}.Release|x64.ActiveCfg = Release|x64
 		{40CD6193-486E-4267-A578-CA6D378C95DA}.Release|x64.Build.0 = Release|x64
+		{E2757156-EE69-4D61-BF6F-8778F0B5A348}.Debug|x64.ActiveCfg = Debug|x64
+		{E2757156-EE69-4D61-BF6F-8778F0B5A348}.Debug|x64.Build.0 = Debug|x64
+		{E2757156-EE69-4D61-BF6F-8778F0B5A348}.Release|x64.ActiveCfg = Release|x64
+		{E2757156-EE69-4D61-BF6F-8778F0B5A348}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
