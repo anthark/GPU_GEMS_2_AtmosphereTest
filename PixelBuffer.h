@@ -35,7 +35,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #define ALIGN_SIZE		64
 #define ALIGN_MASK		(ALIGN_SIZE-1)
-#define ALIGN(x)		(((unsigned int)x+ALIGN_MASK) & ~ALIGN_MASK)
+#define ALIGN(x)		(((uintptr_t)x+ALIGN_MASK) & ~ALIGN_MASK)
 
 typedef enum
 {
